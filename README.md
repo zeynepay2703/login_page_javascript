@@ -4,5 +4,6 @@
 ### Görseller
 
 <div align="center">
-    <img src="https://user-images.githubusercontent.com/116477431/222953746-7204421f-23b1-40a5-800d-b4d905812982.gif" />
+    <img src="https://user-images.githubusercontent.com/116477431/222953914-871490d1-955b-4f4b-a101-8ee65a7898e6.gif" />
 </div>
+
