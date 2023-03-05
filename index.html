@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
-    <!-- <link rel="stylesheet" href="all.min.css"/> -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
@@ -15,18 +14,44 @@
             <img src="images/my-password-concept-illustration_114360-4294.avif"/>
         </div>
         <div class="login-input">
-            <!-- <div class="login-decorate"> -->
-                <h3>USER LOGIN</h3>
-                <div class="input-icon">
-                    <i class="fa-regular fa-user"></i>
+                <div class="title-class">
+                  <h3>USER LOGIN</h3>
+                </div>
+                <div class="input-class">
+                  <div class="input-icon-user">
+                    <i style=
+                    "color:rgb(106,49,104);
+                    font-size: 19px;
+                    position: absolute;
+                    top:298px;
+                    left:948px;" 
+                    class="fa-regular fa-user"></i>
                     <input class="input" type="text">
                 </div>
-                <div class="input-icon">
-                    <i class="fa-solid fa-lock" id="icon-password"></i>
+                <div class="input-icon-password">
+                    <i style=
+                    "color:rgb(106,49,104);
+                    font-size: 19px;
+                    position: absolute;
+                    left: 10px;
+                    top:10px;" 
+                    class="fa-solid fa-lock" id="icon-password"></i>
                     <input class="input" id="password" type="password">
                 </div>
-            <button class="btn" id="login-btn">Log In</button>
-            <!-- </div> -->
+                </div>
+                <div class="buttons">
+                    <button class="blob-btn">
+                      LOG IN
+                      <span class="blob-btn__inner">
+                        <span class="blob-btn__blobs">
+                          <span class="blob-btn__blob"></span>
+                          <span class="blob-btn__blob"></span>
+                          <span class="blob-btn__blob"></span>
+                          <span class="blob-btn__blob"></span>
+                        </span>
+                      </span>
+                    </button>
+                    <br/>
         </div>
     </main>
     <script src="script.js"></script>

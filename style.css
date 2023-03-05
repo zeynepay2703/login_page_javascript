@@ -43,30 +43,144 @@ body{
     font-size: 24px;
     font-weight: 700;
     color: rgb(193,94,185);
+    position: relative;
+    top:50px;
 }
 .login-input .input{
-    width: 220px;
+    width: 259px;
     height: 29px;
-    border-radius: 10px;
+    border-radius: 30px;
     background-color: rgb(235,181,231);
-    padding: 5px;
+    padding: 20px 30px;
 }
 input:focus-visible{
     outline: none;
 }
-#icon-password{
-    cursor: pointer;
+.input-class{
+    display: flex;
+    flex-direction: column;
 }
-.login-input .btn{
-    width: 110px;
-    height: 29px;
-    border-radius: 10px;
-    color: #ffff;
-    background-image: linear-gradient(to bottom right,rgb(222, 133, 222),rgb(153, 153, 242));
+.input-icon-password{
+    position: relative;
+    top: 34px;
+}
+#icon-password:hover{
+    transform: scale(1.2);
     transition: all .3s ease-in;
     cursor: pointer;
 }
-.login-input .btn:hover{
-    box-shadow:0 4px 8px 0 rgba(222, 133, 222, 0.7), 0 6px 20px 0 rgba(153, 153, 242, 0.19); 
+#icon-password{
+    cursor: pointer;
+}
+*, *:before, *:after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+.buttons {
+    margin-top: 50px;
+    text-align: center;
+    border-radius: 30px;
+    position: relative;
+    bottom: 75px;
+}
+.blob-btn {
+    z-index: 1;
+    position: relative;
+    padding: 10px 50px;
+    text-align: center;
+    text-transform: uppercase;
+    color: rgb(193,94,185);
+    font-size: 16px;
+    font-weight: bold;
+    background-color: transparent;
+    outline: none;
+    border: none;
+    transition: color 0.5s;
+    cursor: pointer;
+    border-radius: 30px;
+    transition: all .3s ease-in;
+    cursor: pointer;
+}
+.blob-btn:hover{
+    box-shadow:0 4px 8px 0 rgb(150, 150, 236), 0 6px 20px 0 rgba(0, 0, 0, 0.19); 
     transform: scale(1.2);
+}
+.blob-btn:before {
+    content: "";
+    z-index: 1;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    border: 2px solid rgb(106,49,104);
+    border-radius: 30px;
+}
+.blob-btn:after {
+    content: "";
+    z-index: -2;
+    position: absolute;
+    left: 3px;
+    top: 3px;
+    width: 100%;
+    height: 100%;
+    transition: all 0.3s 0.2s;
+    border-radius: 30px;
+}
+.blob-btn:hover {
+    color: #fff;
+    border-radius: 30px;
+}
+.blob-btn:hover:after {
+    transition: all 0.3s;
+    left: 0;
+    top: 0;
+    border-radius: 30px;
+}
+.blob-btn__inner {
+    z-index: -1;
+    overflow: hidden;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 30px;
+    background: #fff;
+}
+.blob-btn__blobs {
+    position: relative;
+    display: block;
+    height: 100%;
+    filter: url('#goo');
+}
+.blob-btn__blob {
+    position: absolute;
+    top: 2px;
+    width: 25%;
+    height: 100%;
+    background: rgb(150, 150, 236);
+    border-radius: 100%;
+    transform: translate3d(0, 150%, 0) scale(1.7);
+    transition: transform 0.45s;
+}
+.blob-btn__blob:nth-child(1) {
+    left: 0%;
+    transition-delay: 0s;
+}
+.blob-btn__blob:nth-child(2) {
+    left: 30%;
+    transition-delay: 0.08s;
+}
+.blob-btn__blob:nth-child(3) {
+    left: 60%;
+    transition-delay: 0.16s;
+}
+.blob-btn__blob:nth-child(4) {
+    left: 90%;
+    transition-delay: 0.24s;
+}
+.blob-btn:hover .blob-btn__blob {
+    transform: translateZ(0) scale(1.7);
 }
